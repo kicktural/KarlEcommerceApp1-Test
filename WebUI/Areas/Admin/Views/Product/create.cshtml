@@ -1,0 +1,94 @@
+﻿
+
+
+<form method="post" enctype="multipart/form-data">
+    <input type="text" name="ProductName"  placeholder="Enter Product Name in 
+     Az"/>
+    <br />
+    <input type="text" name="ProductName" placeholder="Enter Product Name in
+     En" />
+    <br />
+    <input type="text" name="ProductName" placeholder="Enter Product Name in
+     Ru" />
+    <br />
+    <input type="text" name="Description" placeholder="Enter Description in
+     Az" />
+    <br />
+    <input type="text" name="Description" placeholder="Enter Descriptionin
+     En" />
+    <br />
+    <input type="text" name="Description" placeholder="Enter Description in
+     Ru" />
+    <br />
+    <input type="number" name="Price" />
+    <input type="number" name="Discount" />
+    <input type="number" name="Quantity" />
+    <br />
+    <select name="CategoryId" asp-items="ViewBag.Categories"></select>
+    <br />
+    <input id="productPicture" multiple type="file" accept="image/*" name="photoUrls" />
+    <br />
+     <div class="card">
+         <div id="productList" class="row">
+             <div class="col-2">
+                 <div class="card p-3">
+                    <img class="img-fluid" src="data:image/jpeg;base64,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" />
+                 </div>
+             </div>
+         </div>
+     </div>
+    <br />
+    <input type="submit" value="Create" />
+</form>
+
+@section Scripts{
+    <script>
+
+        const productPicture = document.getElementById("productPicture");
+        const productList = document.getElementById("productList");
+
+
+        productPicture.addEventListener('change', function(e){
+
+            console.log(this.files)
+
+            var datas = new FormData();
+            
+            for(let i = 0; i < this.files.length; i++){
+                datas.append("photoUrls", productPicture.files[i]);
+               
+            }
+
+                $.ajax({
+                    url: '/Picture/UploadPictures',
+                    type:  "POST",
+                    dataType: 'json',
+                    contentType: false,
+                    processData: false,
+                    data: datas,
+                    success: function(e){
+                        console.log(e);
+                        CreateCard(e);
+                    }
+            })
+
+        })
+        function CreateCard(photo) {
+            for (let i = 0; i < photo.length; i++) {
+                productList.innerHTML +=
+                    '
+                    < div class="col-2" >
+                        <div class="card p-3" >
+                            <img class="img-fluid" src = "${photo[i]}" name = "${photo[i]}  />
+                                < input type = "hidden" value="${photo[i]}" name="PhotoUrls" />
+                                    </div>
+                                    < /div>            
+                '
+            }
+            
+        }
+
+        
+
+    </script>
+}
